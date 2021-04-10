@@ -12,7 +12,7 @@ This is a very brief and quick tutorial on how to set up and navigate organizati
     * [Inviting and Managing Members](#github-members)
     * [Add Pre-existing Repositories to Organization](#github-addrepo)
 2. [GitLab Groups](#gitlab)
-    * [Creating a New Organization From Scratch](#github-newgroup)
+    * [Creating a New Organization From Scratch](#gitlab-newgroup)
     * [Navigate to an Existing Organization](#gitlab-existinggroup)
     * [Deleting/Renaming an Organization](#gitlab-deleterename)
     * [Inviting and Managing Members](#gitlab-members)
