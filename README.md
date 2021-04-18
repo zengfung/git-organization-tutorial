@@ -7,12 +7,14 @@ This is a very brief and quick tutorial on how to set up and navigate organizati
 # Table of Contents
 1. [GitHub Organizations](#github)  
     * [Creating a New Organization From Scratch](#github-neworg)
+    * [Creating SubOrganizations (Teams) within an Organization](#github-suborg)
     * [Navigate to an Existing Organization](#github-existingorg)
     * [Deleting/Renaming an Organization](#github-deleterename)
     * [Inviting and Managing Members](#github-members)
     * [Add Pre-existing Repositories to Organization](#github-addrepo)
 2. [GitLab Groups](#gitlab)
     * [Creating a New Organization From Scratch](#gitlab-newgroup)
+    * [Creating SubGroups within a Group](#gitlab-subgroup)
     * [Navigate to an Existing Organization](#gitlab-existinggroup)
     * [Deleting/Renaming an Organization](#gitlab-deleterename)
     * [Inviting and Managing Members](#gitlab-members)
@@ -85,8 +87,16 @@ Depending on the size of the organization and projects, the **Free** and **Team*
 6. Invite members to the organization to complete the set up process.
 ![](images/github-org-invites.PNG)
 
-7. Once you're done, you should see a page that looks like this:
+7. Once you're done, you should see a page that looks like the following. This is the main page of your organization.
 ![](images/github-org-complete.PNG)
+
+## Creating SubOrganizations (Teams) within an Organization <a name="github-suborg"></a>
+1. In GitHub, sub-organizations are known as teams. Once an organization has been set up, it is very straightforward to create teams from within. From the organization main page, click on **Teams**.
+2. Under the **Teams** tab, select **New team**. Fill up the following and hit **Create team**.
+![](images/github-createteam.PNG)
+3. A new team is now created. To manage repository access and permission for each team, click [here](https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/managing-team-access-to-an-organization-repository).
+
+**Note:** Nested teams can be created as shown in the image in step 2. Child teams inherit the parent's access permissions, simplifying permissions management for large groups. Members of child teams also receive notifications when the parent team is @mentioned, simplifying communication with multiple groups of people. For more information, click [here](https://docs.github.com/en/organizations/organizing-members-into-teams/about-teams).
 
 ## Navigating to an Existing Organization <a name="github-existingorg"></a>
 1. Click on your profile photo on the top-right corner of any of your Github page, then select **Your profile**.  
@@ -121,6 +131,24 @@ Assuming that we have some pre-existing repositories on individual accounts that
 2. You can either navigate to **Your groups** then click on **New group**, or you can click on **Create group** to directly reach the following page:  
 ![](images/gitlab-group-newgroup.PNG)
 Fill up this page and click **Create group** and you're good to go.
+
+## Creating SubGroups within a Group <a name="gitlab-subgroup"></a>
+The following is stated on the GitLab documentation on subgroups.
+> By using subgroups you can do the following:  
+> * **Separate internal / external organizations**. Since every group can have its own visibility level (public, internal, or private), you’re able to host groups for different purposes under the same umbrella.
+> * **Organize large projects**. For large projects, subgroups makes it potentially easier to separate permissions on parts of the source code.
+> * **Make it easier to manage people and control visibility**. Give people different permissions depending on their group membership.
+
+1. To create a subgroup you must either be an Owner or a Maintainer of the group, depending on the group’s setting. The setting can be changed for any group by:
+    * A group owner. Select the group, and navigate to **Settings** > **General** > **Permissions, LFS, 2FA**.
+    * An administrator. Navigate to **Admin Area** > **Overview** > **Groups**, select the group, and choose **Edit**.
+2. In the group’s dashboard click the **New subgroup** button.
+![](https://docs.gitlab.com/ee/user/group/subgroups/img/create_subgroup_button_v13_6.png)
+3. Create a new group like you would normally do. Notice that the immediate parent group namespace is fixed under **Group path**. The visibility level can differ from the immediate parent group.
+![](https://docs.gitlab.com/ee/user/group/subgroups/img/create_new_group.png)
+4. Click the **Create group** button to be redirected to the new group’s dashboard page.
+
+**Note:** When you add a member to a group, that member is also added to all subgroups. Permission level is inherited from the group’s parent. This model allows access to subgroups if you have membership in one of its parents.
 
 ## Navigating to an Existing Group <a name="gitlab-existinggroup"></a>
 Navigating to an existing Group by clicking on **Your groups** from the **Groups** drop-down menu on the top left of your screen.  
